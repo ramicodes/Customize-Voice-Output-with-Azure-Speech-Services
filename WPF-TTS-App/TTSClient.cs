@@ -11,7 +11,7 @@ using System.Xml.Linq;
 namespace CognitiveServicesTTS
 {
     /// <summary>
-    /// This class demonstrates how to get a valid O-auth token
+    /// This class handles the valid O-auth token
     /// </summary>
     public class Authentication
     {
@@ -128,9 +128,7 @@ namespace CognitiveServicesTTS
         public T EventData { get; private set; }
     }
 
-    /// <summary>
-    /// Gender of the voice.
-    /// </summary>
+    
     public enum Gender
     {
         Female,
@@ -211,13 +209,7 @@ namespace CognitiveServicesTTS
     /// </summary>
     public class Synthesize
     {
-        /// <summary>
-        /// Generates SSML.
-        /// </summary>
-        /// <param name="locale">The locale.</param>
-        /// <param name="gender">The gender.</param>
-        /// <param name="name">The voice name.</param>
-        /// <param name="text">The text input.</param>
+      
         private string GenerateSsml(string locale, string gender, string name, string text, string rate, string volume, string pitch, string contour)
         {
             var ssmlDoc = new XDocument(
@@ -365,28 +357,16 @@ namespace CognitiveServicesTTS
         /// </summary>
         public class InputOptions
         {
-            /// <summary>
-            /// Initializes a new instance of the <see cref="Input"/> class.
-            /// </summary>
+            // Initialization
             public InputOptions()
             {
-
+                //enter default values here if needed
 
             }
-
-            /// <summary>
-            /// Gets or sets the request URI.
-            /// </summary>
             public Uri RequestUri { get; set; }
 
-            /// <summary>
-            /// Gets or sets the audio output format.
-            /// </summary>
             public AudioOutputFormat OutputFormat { get; set; }
 
-            /// <summary>
-            /// Gets or sets the headers.
-            /// </summary>
             public IEnumerable<KeyValuePair<string, string>> Headers
             {
                 get
@@ -469,27 +449,13 @@ namespace CognitiveServicesTTS
                 }
             }
 
-            /// <summary>
-            /// Gets or sets the locale.
-            /// </summary>
             public String Locale { get; set; }
 
-            /// <summary>
-            /// Gets or sets the type of the voice; male/female.
-            /// </summary>
             public Gender VoiceType { get; set; }
 
-            /// <summary>
-            /// Gets or sets the name of the voice.
-            /// </summary>
             public string VoiceName { get; set; }
 
-            /// <summary>
-            /// Authorization Token.
-            /// </summary>
             public string AuthorizationToken { get; set; }
-
-
             public string Text { get; set; }
             public string SpeakingRate { get; set; }
             public string Pitch { get; set; }
