@@ -1,0 +1,30 @@
+﻿<Window x:Class="DEWA_TTS_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DEWA_TTS_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" >
+            <Label>Input Text:</Label>
+            <TextBox x:Name="InputText" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+            <Label>Speaking Rate Value:</Label><TextBox x:Name="SpeakingRateTxt" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+            <Label>Pitch:</Label>
+            <TextBox x:Name="PitchTxt" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+            <Label>Contour:</Label>
+            <TextBox x:Name="ContourTxt" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+            <Label>Volume:</Label>
+            <TextBox x:Name="VolumeTxt" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+        </StackPanel>
+        <Button Name="SpeakBtn" Grid.Row="1" Content="Speak" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="75" Click="SpeakBtn_Click"/>
+        <TextBox x:Name="_logText" Grid.Row="2"  Height="400" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10"/>
+
+    </Grid>
+</Window>
